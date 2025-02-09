@@ -1,9 +1,6 @@
 # qBittorrent and OpenVPN
-#
-# Version 1.8
 
-FROM ubuntu:20.04
-MAINTAINER MarkusMcNugen
+FROM ubuntu:24.04
 
 VOLUME /downloads
 VOLUME /config
@@ -15,7 +12,7 @@ RUN usermod -u 99 nobody
 # Update packages and install software
 RUN apt-get update \
     && apt-get install -y --no-install-recommends apt-utils openssl \
-    && apt-get install -y software-properties-common \
+    && apt-get install -y software-properties-common iproute2\
     && add-apt-repository ppa:qbittorrent-team/qbittorrent-stable \
     && apt-get update \
     && apt-get install -y qbittorrent-nox openvpn curl moreutils net-tools dos2unix kmod iptables ipcalc unrar \
