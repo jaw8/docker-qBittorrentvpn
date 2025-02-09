@@ -6,7 +6,7 @@ Docker container which runs the latest headless qBittorrent client with WebUI wh
 ![alt text][preview]
 
 ## Docker Features
-* Base: Ubuntu 20.04
+* Base: Ubuntu 24.04
 * Always builds latest qBittorrent client
 * Size: 300MB
 * Selectively enable or disable OpenVPN support
